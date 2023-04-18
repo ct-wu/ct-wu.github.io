@@ -15,7 +15,7 @@
 
 
 
-<title>Second Post | Hexo</title>
+<title>Test Mermaid | Hexo</title>
 
 
 
@@ -153,7 +153,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        Second Post
+        Test Mermaid
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -222,7 +222,7 @@
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
       <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
-        Second Post
+        Test Mermaid
       </h1>
       <p class="mb-6">
         
@@ -233,14 +233,29 @@
           <span class="text-gray-400">·</span>
           <span>1 min</span>
           <span class="text-gray-400">·</span>
-          <span>7 words</span>
+          <span>50 words</span>
         </section>
       </div>
     </div>
   </header>
   <!-- content -->
   <article class="post-content mt-10 prose dark:prose-invert post-content">
-    <p>這篇會自動發布</p>
+    <pre class="mermaid">graph LR
+    subgraph MongoDB
+    A[Orders] -->|Streaming| B(Kafka)
+    end
+    subgraph Data Lake Storage
+    B -->|Streaming| C{Data Lake Storage}
+    end
+    subgraph Real-time Processing
+    C -->|Streaming| D[Spark Structured Streaming]
+    end
+    subgraph In-Memory Database
+    D -->|Query| E[Apache Ignite]
+    end
+    subgraph Reporting Platform
+    E -->|Query| F(Tableau)
+    end</pre>
 
   </article>
   <!-- tag -->
@@ -248,7 +263,7 @@
     
       
         <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-          <a href="/tags/New-Tag/">New Tag</a>
+          <a href="/tags/mermaid/">mermaid</a>
         </span>
       
     
@@ -257,16 +272,11 @@
   <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
     <div>
       
-        <a href="/2023/04/18/Test-Mermaid/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
-          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
-          Test Mermaid
-        </a>
-      
     </div>
     <div>
       
-        <a href="/2023/04/18/hello-world/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
-          Hello World
+        <a href="/2023/04/18/Second-Post/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          Second Post
           <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
         </a>
       
